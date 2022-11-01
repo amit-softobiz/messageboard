@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <hr>
+
+    <% messages.forEach((item)=>{%>
+      <p><%=item.text %></p>
+      <p><%=item.user %></p>
+      <p><%=item.added %></p>
+      <hr>
+    <%})%>  
+  </body>
+</html>
