@@ -22,4 +22,9 @@ router.get('/new', function(req, res, next) {
   res.render('form');
 });
 
+router.post('/new', function(req, res, next) {
+    res.send("successfully data added..");
+});
+
+
 module.exports = router;
