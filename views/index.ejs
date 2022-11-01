@@ -1,19 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <hr>
 
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<style>
+  /* .center {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border: 5px solid #FFFF00;
+    padding: 10px;
+  } */
+</style>
+
+<body>
+  <h1>
+    <%= title %>
+  </h1>
+  <h6>Welcome to <%= title %></h6>
+  <hr>
+  <div class="center">
     <% messages.forEach((item)=>{%>
-      <p><%=item.text %></p>
-      <p><%=item.user %></p>
-      <p><%=item.added %></p>
+      <p>
+        <%=item.text %>
+      </p>
+      <p>
+        <%=item.user %>
+      </p>
+      <p>
+        <%=item.added %>
+      </p>
       <hr>
-    <%})%>  
-  </body>
+      <%})%>
+      
+      <button onclick="newMsg()">new message</button>
+  </div>
+  <script>
+    const newMsg = a=>{
+      window.location.href="/new";
+    }
+  </script>
+
+</body>
+
 </html>
