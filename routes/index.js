@@ -23,7 +23,10 @@ router.get('/new', function(req, res, next) {
 });
 
 router.post('/new', function(req, res, next) {
-    res.send("successfully data added..");
+ let data = req.body;
+ Object.assign(data,{added: new Date()});
+ messages.push(data);
+ res.redirect('/') 
 });
 
 
